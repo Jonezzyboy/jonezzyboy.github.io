@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>jonezzyboy* — small games &amp; noisy tools</title>
-<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
+<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
 <link rel="canonical" href="https://jonezzyboy.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✳️</text></svg>">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2790049582805492"
@@ -23,6 +23,7 @@
   --cream-soft: rgba(246, 242, 232, 0.72);
   --star: #ffc233;
   --reckon: #b8342e;
+  --dealt: #1f7a4c;
   --audio: #0e8f9b;
   --books: #8140a8;
   --pup: #23252f;
@@ -137,6 +138,9 @@ body {
 .project-reckon .motif { background: var(--reckon); }
 .project-reckon h2 .go { color: var(--reckon); }
 
+.project-dealt .motif { background: var(--dealt); }
+.project-dealt h2 .go { color: var(--dealt); }
+
 .project-audio .motif { background: var(--audio); }
 .project-audio h2 .go { color: var(--audio); }
 
@@ -204,6 +208,38 @@ body {
       <span class="eyebrow">Game · Daily · 2026</span>
       <h2>Reckon <span class="go">→</span></h2>
       <p>Six numbers, four operations, one total to settle. The same account for everyone, a fresh one every midnight.</p>
+    </span>
+  </a>
+
+  <a class="project project-dealt" href="/dealt/">
+    <svg class="motif" viewBox="0 0 280 64" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#f6f2e8" stroke-width="2.5">
+        <g transform="rotate(-26 140 118)">
+          <rect x="126" y="12" width="28" height="40" rx="4"/>
+          <text x="140" y="39" font-size="15" text-anchor="middle" fill="#f6f2e8" stroke="none">♠</text>
+        </g>
+        <g transform="rotate(-13 140 118)">
+          <rect x="126" y="12" width="28" height="40" rx="4"/>
+          <text x="140" y="39" font-size="15" text-anchor="middle" fill="#f6f2e8" stroke="none">♥</text>
+        </g>
+        <g>
+          <rect x="126" y="12" width="28" height="40" rx="4"/>
+          <text x="140" y="39" font-size="15" text-anchor="middle" fill="#f6f2e8" stroke="none">?</text>
+        </g>
+        <g transform="rotate(13 140 118)">
+          <rect x="126" y="12" width="28" height="40" rx="4"/>
+          <text x="140" y="39" font-size="15" text-anchor="middle" fill="#f6f2e8" stroke="none">♦</text>
+        </g>
+        <g transform="rotate(26 140 118)">
+          <rect x="126" y="12" width="28" height="40" rx="4"/>
+          <text x="140" y="39" font-size="15" text-anchor="middle" fill="#f6f2e8" stroke="none">♣</text>
+        </g>
+      </g>
+    </svg>
+    <span class="project-body">
+      <span class="eyebrow">Game · Daily · 2026</span>
+      <h2>Dealt <span class="go">→</span></h2>
+      <p>Twelve cards on the table, five in the dealer's hand. Four calls to read it — a fresh deal every midnight.</p>
     </span>
   </a>
 
