@@ -154,6 +154,21 @@ body {
 .project-pup .motif { background: var(--pup); }
 .project-pup h2 .go { color: var(--pup); }
 
+.daily-status {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+
+.daily-status b { font-weight: 600; }
+
+.project-reckon .daily-status b { color: var(--reckon); }
+.project-dealt .daily-status b { color: var(--dealt); }
+.project-herd .daily-status b { color: var(--herd); }
+
 .next {
   border: 2px dashed rgba(246, 242, 232, 0.4);
   border-radius: 14px;
@@ -194,7 +209,8 @@ body {
 
 <header class="masthead">
   <h1 class="wordmark">jonezzyboy<span class="star">*</span></h1>
-  <p class="tagline">Small games and noisy tools that live in the browser. New things appear here when they're done.</p>
+  <p class="tagline">Small games and noisy tools that live in the browser.
+    The Daily Shelf turns over at midnight; new things appear here when they're done.</p>
 </header>
 
 <main class="shelf">
@@ -209,9 +225,10 @@ body {
       </g>
     </svg>
     <span class="project-body">
-      <span class="eyebrow">Game · Daily · 2026</span>
+      <span class="eyebrow">The Daily Shelf · 2026</span>
       <h2>Reckon <span class="go">→</span></h2>
       <p>Six numbers, four operations, one total to settle. The same account for everyone, a fresh one every midnight.</p>
+      <span class="daily-status" data-daily="reckon" data-epoch="2026-08-03" data-glyph="🧾" hidden></span>
     </span>
   </a>
 
@@ -241,9 +258,10 @@ body {
       </g>
     </svg>
     <span class="project-body">
-      <span class="eyebrow">Game · Daily · 2026</span>
+      <span class="eyebrow">The Daily Shelf · 2026</span>
       <h2>Dealt <span class="go">→</span></h2>
       <p>Twelve cards on the table, five in the dealer's hand. Four calls to read it — a fresh deal every midnight.</p>
+      <span class="daily-status" data-daily="dealt" data-epoch="2026-08-05" data-glyph="🃏" hidden></span>
     </span>
   </a>
 
@@ -277,9 +295,10 @@ body {
       </g>
     </svg>
     <span class="project-body">
-      <span class="eyebrow">Game · Daily · 2026</span>
+      <span class="eyebrow">The Daily Shelf · 2026</span>
       <h2>Herded <span class="go">→</span></h2>
       <p>Seven animals in the pen, five through the gate. Each one bends the score its own way — order is everything, fresh every midnight.</p>
+      <span class="daily-status" data-daily="herded" data-epoch="2026-08-11" data-glyph="🐾" hidden></span>
     </span>
   </a>
 
@@ -346,6 +365,35 @@ body {
   <span><span class="star">*</span> built for the fun of it</span>
   <a href="https://github.com/Jonezzyboy">github.com/Jonezzyboy</a>
 </footer>
+
+<script>
+// The Daily Shelf, live: the dailies share this origin, so each card can
+// show today's number, whether it's been played, and the current streak —
+// all read from the games' own localStorage. Fails quietly without it.
+(function () {
+  let shelf = {};
+  try { shelf = JSON.parse(localStorage.getItem('dailies-v1')) || {}; } catch (e) { /* no storage */ }
+  const now = new Date();
+  const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const todayKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+
+  document.querySelectorAll('.daily-status').forEach(function (el) {
+    const [y, m, d] = el.dataset.epoch.split('-').map(Number);
+    const no = Math.round((startOfDay - new Date(y, m - 1, d)) / 864e5) + 1;
+    if (no < 1) return;
+    let streak = 0;
+    try {
+      const stats = JSON.parse(localStorage.getItem(`${el.dataset.daily}-stats-v1`)) || {};
+      streak = stats.streak || 0;
+    } catch (e) { /* no storage */ }
+    const done = shelf[el.dataset.daily] === todayKey;
+    let text = `${el.dataset.glyph} No. ${no} · <b>${done ? 'played ✓' : 'waiting for you'}</b>`;
+    if (streak > 1) text += ` · ${streak} days running`;
+    el.innerHTML = text;
+    el.hidden = false;
+  });
+})();
+</script>
 
 </body>
 </html>
