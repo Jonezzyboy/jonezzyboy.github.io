@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>jonezzyboy* — small games &amp; noisy tools</title>
-<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, Herded, a daily animal line-up game, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
+<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, Herded, a daily animal line-up game, Minted, a daily incremental at the coin press, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
 <link rel="canonical" href="https://jonezzyboy.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✳️</text></svg>">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2790049582805492"
@@ -25,6 +25,7 @@
   --reckon: #b8342e;
   --dealt: #1f7a4c;
   --herd: #b06f1e;
+  --minted: #8a7a10;
   --audio: #0e8f9b;
   --books: #8140a8;
   --pup: #23252f;
@@ -145,6 +146,9 @@ body {
 .project-herd .motif { background: var(--herd); }
 .project-herd h2 .go { color: var(--herd); }
 
+.project-minted .motif { background: var(--minted); }
+.project-minted h2 .go { color: var(--minted); }
+
 .project-audio .motif { background: var(--audio); }
 .project-audio h2 .go { color: var(--audio); }
 
@@ -168,6 +172,7 @@ body {
 .project-reckon .daily-status b { color: var(--reckon); }
 .project-dealt .daily-status b { color: var(--dealt); }
 .project-herd .daily-status b { color: var(--herd); }
+.project-minted .daily-status b { color: var(--minted); }
 
 .next {
   border: 2px dashed rgba(246, 242, 232, 0.4);
@@ -299,6 +304,31 @@ body {
       <h2>Herded <span class="go">→</span></h2>
       <p>Seven animals in the pen, five through the gate. Each one bends the score its own way — order is everything, fresh every midnight.</p>
       <span class="daily-status" data-daily="herded" data-epoch="2026-08-11" data-glyph="🐾" hidden></span>
+    </span>
+  </a>
+
+  <a class="project project-minted" href="/minted/">
+    <svg class="motif" viewBox="0 0 280 64" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#f6f2e8" stroke-width="2.5" stroke-linecap="round">
+        <ellipse cx="70" cy="54" rx="17" ry="5"/>
+        <ellipse cx="70" cy="46" rx="17" ry="5"/>
+        <ellipse cx="70" cy="38" rx="17" ry="5"/>
+        <ellipse cx="118" cy="54" rx="17" ry="5"/>
+        <ellipse cx="118" cy="46" rx="17" ry="5"/>
+        <ellipse cx="118" cy="38" rx="17" ry="5"/>
+        <ellipse cx="118" cy="30" rx="17" ry="5"/>
+        <ellipse cx="118" cy="22" rx="17" ry="5"/>
+        <ellipse cx="166" cy="54" rx="17" ry="5"/>
+        <ellipse cx="166" cy="46" rx="17" ry="5"/>
+        <circle cx="212" cy="30" r="14"/>
+        <circle cx="212" cy="30" r="9"/>
+      </g>
+    </svg>
+    <span class="project-body">
+      <span class="eyebrow">The Daily Shelf · 2026</span>
+      <h2>Minted <span class="go">→</span></h2>
+      <p>One working day at the coin press. Thirty bells — strike a coin or buy the machine. Only the vault at close counts, fresh every midnight.</p>
+      <span class="daily-status" data-daily="minted" data-epoch="2026-09-17" data-glyph="🪙" hidden></span>
     </span>
   </a>
 
