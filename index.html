@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>jonezzyboy* — small games &amp; noisy tools</title>
-<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, Herded, a daily animal line-up game, Minted, a daily incremental at the coin press, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
+<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, Herded, a daily animal line-up game, Minted, a daily incremental at the coin press, Nerve, a choose-your-own-adventure judged by a local model, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
 <link rel="canonical" href="https://jonezzyboy.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✳️</text></svg>">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2790049582805492"
@@ -26,6 +26,7 @@
   --dealt: #1f7a4c;
   --herd: #b06f1e;
   --minted: #8a7a10;
+  --nerve: #b3255e;
   --audio: #0e8f9b;
   --books: #8140a8;
   --pup: #23252f;
@@ -148,6 +149,9 @@ body {
 
 .project-minted .motif { background: var(--minted); }
 .project-minted h2 .go { color: var(--minted); }
+
+.project-nerve .motif { background: var(--nerve); }
+.project-nerve h2 .go { color: var(--nerve); }
 
 .project-audio .motif { background: var(--audio); }
 .project-audio h2 .go { color: var(--audio); }
@@ -329,6 +333,29 @@ body {
       <h2>Minted <span class="go">→</span></h2>
       <p>One working day at the coin press. Thirty bells — strike a coin or buy the machine. Only the vault at close counts, fresh every midnight.</p>
       <span class="daily-status" data-daily="minted" data-epoch="2026-09-17" data-glyph="🪙" hidden></span>
+    </span>
+  </a>
+
+  <a class="project project-nerve" href="/nerve/">
+    <svg class="motif" viewBox="0 0 280 64" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="#f6f2e8">
+        <rect x="18" y="40" width="24" height="16" opacity="0.45"/>
+        <rect x="48" y="26" width="24" height="30" opacity="0.45"/>
+        <rect x="78" y="10" width="24" height="46"/>
+        <rect x="108" y="32" width="24" height="24" opacity="0.45"/>
+        <rect x="138" y="46" width="24" height="10" opacity="0.45"/>
+        <rect x="178" y="44" width="24" height="12" opacity="0.45"/>
+        <rect x="208" y="20" width="24" height="36"/>
+        <rect x="238" y="38" width="24" height="18" opacity="0.45"/>
+      </g>
+      <g fill="none" stroke="#f6f2e8" stroke-width="2" opacity="0.5">
+        <line x1="168" y1="6" x2="168" y2="58"/>
+      </g>
+    </svg>
+    <span class="project-body">
+      <span class="eyebrow">Game &middot; Local models &middot; 2026</span>
+      <h2>Nerve <span class="go">&rarr;</span></h2>
+      <p>A choose-your-own-adventure judged by a model on your own machine. Nimble rates every choice you make, and its probabilities decide how it lands. Needs Ollama running locally.</p>
     </span>
   </a>
 
