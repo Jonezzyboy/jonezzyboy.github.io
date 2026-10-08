@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>jonezzyboy* — small games &amp; noisy tools</title>
-<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, Herded, a daily animal line-up game, Minted, a daily incremental at the coin press, Nerve, a choose-your-own-adventure judged by a local model, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
+<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, Herded, a daily animal line-up game, Minted, a daily incremental at the coin press, Emberfall, a daily tile-clearing chain game, Nerve, a choose-your-own-adventure judged by a local model, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
 <link rel="canonical" href="https://jonezzyboy.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✳️</text></svg>">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2790049582805492"
@@ -26,6 +26,7 @@
   --dealt: #1f7a4c;
   --herd: #b06f1e;
   --minted: #8a7a10;
+  --ember: #c2471f;
   --nerve: #b3255e;
   --audio: #0e8f9b;
   --books: #8140a8;
@@ -150,6 +151,9 @@ body {
 .project-minted .motif { background: var(--minted); }
 .project-minted h2 .go { color: var(--minted); }
 
+.project-ember .motif { background: var(--ember); }
+.project-ember h2 .go { color: var(--ember); }
+
 .project-nerve .motif { background: var(--nerve); }
 .project-nerve h2 .go { color: var(--nerve); }
 
@@ -177,6 +181,7 @@ body {
 .project-dealt .daily-status b { color: var(--dealt); }
 .project-herd .daily-status b { color: var(--herd); }
 .project-minted .daily-status b { color: var(--minted); }
+.project-ember .daily-status b { color: var(--ember); }
 
 .next {
   border: 2px dashed rgba(246, 242, 232, 0.4);
@@ -333,6 +338,30 @@ body {
       <h2>Minted <span class="go">→</span></h2>
       <p>One working day at the coin press. Thirty bells — strike a coin or buy the machine. Only the vault at close counts, fresh every midnight.</p>
       <span class="daily-status" data-daily="minted" data-epoch="2026-09-17" data-glyph="🪙" hidden></span>
+    </span>
+  </a>
+
+  <a class="project project-ember" href="/emberfall/">
+    <svg class="motif" viewBox="0 0 280 64" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#f6f2e8" stroke-width="2.5" stroke-linejoin="round">
+        <rect x="46" y="14" width="36" height="36" rx="8"/>
+        <rect x="90" y="14" width="36" height="36" rx="8"/>
+        <rect x="154" y="14" width="36" height="36" rx="8"/>
+        <rect x="198" y="14" width="36" height="36" rx="8"/>
+      </g>
+      <g fill="#f6f2e8">
+        <circle cx="64" cy="32" r="8"/>
+        <path d="M108 23l9 16h-18z"/>
+        <path d="M172 23l9 9l-9 9l-9-9z"/>
+        <rect x="209" y="25" width="14" height="14"/>
+        <path d="M140 18l3.4 10.6l10.6 3.4l-10.6 3.4l-3.4 10.6l-3.4-10.6l-10.6-3.4l10.6-3.4z"/>
+      </g>
+    </svg>
+    <span class="project-body">
+      <span class="eyebrow">The Daily Shelf · 2026</span>
+      <h2>Emberfall <span class="go">→</span></h2>
+      <p>Tap groups of matching tiles, forge Novas and Prisms, and chain them across the board. One daily board for everyone, plus endless runs and a Forge of upgrades.</p>
+      <span class="daily-status" data-daily="emberfall" data-epoch="2026-10-08" data-glyph="🔥" hidden></span>
     </span>
   </a>
 
