@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>jonezzyboy* — small games &amp; noisy tools</title>
-<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, Herded, a daily animal line-up game, Minted, a daily incremental at the coin press, Emberfall, a daily tile-clearing chain game, Nerve, a choose-your-own-adventure judged by a local model, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
+<meta name="description" content="Small games and web tools by Jonezzyboy: Reckon, a daily numbers game, Dealt, a daily poker deduction game, Herded, a daily animal line-up game, Minted, a daily incremental at the coin press, Emberfall, a daily tile-clearing chain game, T3D, a daily test-driven coding kata, Nerve, a choose-your-own-adventure judged by a local model, web audio tools, a bookshop name generator, and a pixel-art terminal dalmatian.">
 <link rel="canonical" href="https://jonezzyboy.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✳️</text></svg>">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2790049582805492"
@@ -28,6 +28,7 @@
   --minted: #8a7a10;
   --ember: #c2471f;
   --nerve: #b3255e;
+  --t3d: #34506f;
   --audio: #0e8f9b;
   --books: #8140a8;
   --pup: #23252f;
@@ -154,6 +155,9 @@ body {
 .project-ember .motif { background: var(--ember); }
 .project-ember h2 .go { color: var(--ember); }
 
+.project-t3d .motif { background: var(--t3d); }
+.project-t3d h2 .go { color: var(--t3d); }
+
 .project-nerve .motif { background: var(--nerve); }
 .project-nerve h2 .go { color: var(--nerve); }
 
@@ -182,6 +186,7 @@ body {
 .project-herd .daily-status b { color: var(--herd); }
 .project-minted .daily-status b { color: var(--minted); }
 .project-ember .daily-status b { color: var(--ember); }
+.project-t3d .daily-status b { color: var(--t3d); }
 
 .next {
   border: 2px dashed rgba(246, 242, 232, 0.4);
@@ -362,6 +367,33 @@ body {
       <h2>Emberfall <span class="go">→</span></h2>
       <p>Tap groups of matching tiles, forge Novas and Prisms, and chain them across the board. One daily board for everyone, plus endless runs and a Forge of upgrades.</p>
       <span class="daily-status" data-daily="emberfall" data-epoch="2026-10-08" data-glyph="🔥" hidden></span>
+    </span>
+  </a>
+
+  <a class="project project-t3d" href="/t3d/">
+    <svg class="motif" viewBox="0 0 280 64" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g>
+        <circle cx="50" cy="32" r="11" fill="none" stroke="#f6f2e8" stroke-width="2.5"/>
+        <path d="M46 28l8 8M54 28l-8 8" stroke="#f6f2e8" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="80" cy="32" r="11" fill="none" stroke="#f6f2e8" stroke-width="2.5"/>
+        <path d="M76 28l8 8M84 28l-8 8" stroke="#f6f2e8" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="110" cy="32" r="12" fill="#f6f2e8"/>
+        <path d="M105 32l3.5 3.5l6.5-7" fill="none" stroke="#34506f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="140" cy="32" r="12" fill="#f6f2e8"/>
+        <path d="M135 32l3.5 3.5l6.5-7" fill="none" stroke="#34506f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="170" cy="32" r="12" fill="#f6f2e8"/>
+        <path d="M165 32l3.5 3.5l6.5-7" fill="none" stroke="#34506f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="200" cy="32" r="12" fill="#f6f2e8"/>
+        <path d="M195 32l3.5 3.5l6.5-7" fill="none" stroke="#34506f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="230" cy="32" r="12" fill="#f6f2e8"/>
+        <path d="M225 32l3.5 3.5l6.5-7" fill="none" stroke="#34506f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
+    <span class="project-body">
+      <span class="eyebrow">The Daily Shelf · 2026</span>
+      <h2>T3D <span class="go">→</span></h2>
+      <p>Test Driven Development Daily. A function stub and a hidden stack of tests — turn them green one at a time, in as few runs as you can.</p>
+      <span class="daily-status" data-daily="t3d" data-epoch="2026-10-01" data-glyph="🧪" hidden></span>
     </span>
   </a>
 
